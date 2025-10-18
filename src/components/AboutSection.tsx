@@ -18,12 +18,12 @@ export default function AboutSection() {
         { icon: MapPin, text: "Based in Pune, India", color: "text-blue-600" },
         {
             icon: Briefcase,
-            text: "3+ years of experience",
+            text: "1.5+ years of experience",
             color: "text-green-600",
         },
         {
             icon: GraduationCap,
-            text: "B.E. from PICT, Pune",
+            text: "B.E. E&TC from PICT (CGPA: 9.3/10)",
             color: "text-purple-600",
         },
     ];
@@ -31,23 +31,23 @@ export default function AboutSection() {
     const expertise = [
         {
             icon: Code,
-            title: "Frontend Development",
-            description: "React, Next.js, TypeScript",
+            title: "Full Stack Development",
+            description: "Python, Node.js, React, Flutter",
         },
         {
             icon: Database,
-            title: "Backend Development",
-            description: "Node.js, Express, APIs",
+            title: "Database Management",
+            description: "MongoDB, MySQL, PostgreSQL",
         },
         {
             icon: Cloud,
-            title: "Cloud & DevOps",
-            description: "AWS, Docker, CI/CD",
+            title: "Machine Learning",
+            description: "Python ML models, Data Analysis",
         },
         {
             icon: Users,
-            title: "Team Leadership",
-            description: "Mentoring, Code Reviews",
+            title: "Agile Development",
+            description: "Team collaboration, Testing automation",
         },
     ];
 
@@ -142,21 +142,22 @@ export default function AboutSection() {
                     >
                         <div className="space-y-6">
                             <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                                Software Engineer &
+                                Software Development Engineer &
                                 <span className="block gradient-text bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                                     Full Stack Developer
                                 </span>
                             </h3>
 
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                I am a Software Engineer with 3+ years of
-                                experience in building scalable web applications
-                                and microservices. I specialize in full-stack
-                                development with expertise in React, Node.js,
-                                and cloud technologies. I am passionate about
-                                creating efficient, maintainable, and
-                                user-friendly solutions that solve real-world
-                                problems.
+                                I am a Software Development Engineer with 1.5+
+                                years of experience at Source.One, building
+                                innovative solutions that drive business growth.
+                                I specialize in Python, Node.js, React, and
+                                Flutter development, with expertise in MongoDB
+                                and machine learning. I have increased customer
+                                base by 25% and reduced turnaround time by 20%
+                                through optimized solutions. Awarded Outstanding
+                                Contributor 2025.
                             </p>
                         </div>
 

@@ -10,7 +10,7 @@ export default function AwardsSection() {
             subtitle: "Employee of the Year 2025",
             company: "Source.One",
             description:
-                "Recognized for exceptional performance and impact, demonstrating outstanding leadership and innovation in software development.",
+                "Received the Outstanding Contributor Award, equivalent to the Employee of the Year 2025, for exceptional performance and impact at Source.One.",
             icon: Trophy,
             color: "from-yellow-400 to-orange-500",
             bgColor: "bg-yellow-50",
@@ -23,7 +23,7 @@ export default function AwardsSection() {
             subtitle: "Best Performer – Q1 2024",
             company: "Source.One",
             description:
-                "Honored for leadership potential and consistent delivery excellence, showcasing rapid growth and professional development.",
+                "Honored with the Best Youngster Award and Best Performer – Q1 2024 for leadership potential and consistent delivery at Source.One.",
             icon: Star,
             color: "from-green-400 to-emerald-500",
             bgColor: "bg-green-50",
@@ -32,30 +32,30 @@ export default function AwardsSection() {
             category: "Performance",
         },
         {
-            title: "AI Impact Award",
-            subtitle: "Machine Learning Innovation",
-            company: "Source.One",
+            title: "ACM-ICPC Regional Round",
+            subtitle: "Competitive Programming",
+            company: "Pune-Gwalior Regional",
             description:
-                "Awarded for successful implementation of a machine learning project that determined real-time freight costs for goods based on their load characteristics.",
+                "Competed in ACM-ICPC Pune-Gwalior Regional Round and secured Rank 251, demonstrating strong problem-solving and algorithmic skills.",
             icon: Brain,
             color: "from-blue-400 to-cyan-500",
             bgColor: "bg-blue-50",
             textColor: "text-blue-600",
-            year: "2024",
-            category: "Innovation",
+            year: "2022",
+            category: "Competition",
         },
         {
-            title: "Growth Category Award",
-            subtitle: "Revenue Generation Excellence",
-            company: "Source.One",
+            title: "Codechef September Starters",
+            subtitle: "Coding Competition",
+            company: "Codechef",
             description:
-                "Recognized for contribution in project campaigns that managed multiple company-wide campaigns via webchat and mobile applications, providing key metrics and driving revenue growth.",
+                "Secured rank of 73/8048 in Codechef September Starters 2021, showcasing exceptional coding and problem-solving abilities.",
             icon: TrendingUp,
             color: "from-purple-400 to-pink-500",
             bgColor: "bg-purple-50",
             textColor: "text-purple-600",
-            year: "2024",
-            category: "Growth",
+            year: "2021",
+            category: "Coding",
         },
     ];
 
@@ -172,17 +172,17 @@ export default function AwardsSection() {
                         { label: "Awards Won", value: "4+", icon: Trophy },
                         {
                             label: "Years Experience",
-                            value: "3+",
+                            value: "1.5+",
                             icon: Calendar,
                         },
                         {
-                            label: "Projects Led",
-                            value: "10+",
+                            label: "Coding Questions Solved",
+                            value: "1000+",
                             icon: TrendingUp,
                         },
                         {
-                            label: "Team Members Mentored",
-                            value: "5+",
+                            label: "Students Taught",
+                            value: "450+",
                             icon: Star,
                         },
                     ].map((stat, index) => (
