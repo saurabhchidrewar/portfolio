@@ -116,28 +116,70 @@ h3 {
 
 /* Buttons */
 .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    transform: translateZ(0);
 }
 
 .btn-primary {
-    @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 hover:scale-105 shadow-lg hover:shadow-xl;
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #4338ca, #6d28d9);
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .btn-secondary {
-    @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 hover:scale-105 shadow-md hover:shadow-lg;
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.btn-secondary:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .btn-ghost {
-    @apply text-gray-600 hover:text-gray-900 hover:bg-gray-100;
+    color: #4b5563;
+}
+
+.btn-ghost:hover {
+    color: #111827;
+    background: #f3f4f6;
 }
 
 /* Cards */
 .card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    transition: all 0.3s ease;
 }
 
-.card-hover {
-    @apply hover:scale-105 hover:-translate-y-1;
+.card:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.card-hover:hover {
+    transform: scale(1.05) translateY(-0.25rem);
 }
 
 /* Animations */
@@ -236,11 +278,12 @@ h3 {
     }
 
     .btn {
-        @apply px-4 py-2 text-sm;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
     }
 
     .card {
-        @apply rounded-xl;
+        border-radius: 0.75rem;
     }
 }
 

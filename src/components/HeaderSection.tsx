@@ -72,7 +72,7 @@ export default function HeaderSection() {
                         </motion.div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                            <span className="block">Hi, I'm</span>
+                            <span className="block">Hi, I&apos;m</span>
                             <span className="block gradient-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                                 Saurabh
                             </span>

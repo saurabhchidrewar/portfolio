@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Database, Cloud, Wrench, Star, Zap } from "lucide-react";
+import { Code, Database, Cloud, Wrench, Zap } from "lucide-react";
 
 export default function SkillsSection() {
     const skillCategories = [

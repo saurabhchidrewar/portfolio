@@ -86,15 +86,15 @@ export default function ContactSection() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-                        Let's Connect
+                        Let&apos;s Connect
                     </motion.div>
 
                     <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                         Get In Touch
                     </h2>
                     <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                        Ready to work together? Let's discuss your next project
-                        and bring your ideas to life.
+                        Ready to work together? Let&apos;s discuss your next
+                        project and bring your ideas to life.
                     </p>
                 </motion.div>
 
@@ -109,14 +109,14 @@ export default function ContactSection() {
                     >
                         <div className="space-y-6">
                             <h3 className="text-3xl font-bold text-white mb-4">
-                                Let's start a conversation
+                                Let&apos;s start a conversation
                             </h3>
                             <p className="text-white/80 text-lg leading-relaxed">
-                                I'm always excited to discuss new opportunities,
-                                creative projects, or just have a chat about
-                                technology and development. Whether you have a
-                                specific project in mind or just want to
-                                connect, I'd love to hear from you.
+                                I&apos;m always excited to discuss new
+                                opportunities, creative projects, or just have a
+                                chat about technology and development. Whether
+                                you have a specific project in mind or just want
+                                to connect, I&apos;d love to hear from you.
                             </p>
                         </div>
 

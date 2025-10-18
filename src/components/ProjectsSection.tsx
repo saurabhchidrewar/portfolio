@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Calendar, Users, Star } from "lucide-react";
+import { ExternalLink, Github, Calendar, Star } from "lucide-react";
 import Image from "next/image";
 
 export default function ProjectsSection() {
@@ -114,8 +114,8 @@ export default function ProjectsSection() {
                         My Projects
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        A showcase of my recent work and the impact I've made
-                        through technology
+                        A showcase of my recent work and the impact I&apos;ve
+                        made through technology
                     </p>
                 </motion.div>
 

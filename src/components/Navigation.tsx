@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu,
@@ -22,15 +22,28 @@ export default function Navigation({ isScrolled }: NavigationProps) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState(0);
 
-    const navItems = [
-        { label: "Home", index: 0, icon: Home, href: "#home" },
-        { label: "About", index: 1, icon: User, href: "#about" },
-        { label: "Experience", index: 2, icon: Briefcase, href: "#experience" },
-        { label: "Skills", index: 3, icon: Code, href: "#skills" },
-        { label: "Projects", index: 4, icon: FolderOpen, href: "#projects" },
-        { label: "Awards", index: 5, icon: Award, href: "#awards" },
-        { label: "Contact", index: 6, icon: Mail, href: "#contact" },
-    ];
+    const navItems = useMemo(
+        () => [
+            { label: "Home", index: 0, icon: Home, href: "#home" },
+            { label: "About", index: 1, icon: User, href: "#about" },
+            {
+                label: "Experience",
+                index: 2,
+                icon: Briefcase,
+                href: "#experience",
+            },
+            { label: "Skills", index: 3, icon: Code, href: "#skills" },
+            {
+                label: "Projects",
+                index: 4,
+                icon: FolderOpen,
+                href: "#projects",
+            },
+            { label: "Awards", index: 5, icon: Award, href: "#awards" },
+            { label: "Contact", index: 6, icon: Mail, href: "#contact" },
+        ],
+        []
+    );
 
     const scrollToSection = (index: number) => {
         const sections = [
@@ -59,7 +72,7 @@ export default function Navigation({ isScrolled }: NavigationProps) {
             const scrollPosition = window.scrollY + 100;
 
             for (let i = sections.length - 1; i >= 0; i--) {
-                if (sections[i] && sections[i].offsetTop <= scrollPosition) {
+                if (sections[i] && sections[i]!.offsetTop <= scrollPosition) {
                     setActiveSection(i);
                     break;
                 }
@@ -68,7 +81,7 @@ export default function Navigation({ isScrolled }: NavigationProps) {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    }, [navItems]);
 
     return (
         <>
