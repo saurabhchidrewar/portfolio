@@ -5,10 +5,10 @@ import { ChevronDown, Code, Database, Globe, Zap } from "lucide-react";
 
 export default function HeaderSection() {
     const skills = [
-        { icon: Code, text: "Frontend" },
-        { icon: Database, text: "Backend" },
-        { icon: Globe, text: "Full Stack" },
-        { icon: Zap, text: "Performance" },
+        { icon: Code, text: "Python" },
+        { icon: Database, text: "MongoDB" },
+        { icon: Globe, text: "React" },
+        { icon: Zap, text: "Flutter" },
     ];
 
     return (
@@ -61,20 +61,10 @@ export default function HeaderSection() {
                         transition={{ duration: 0.8 }}
                         className="space-y-4"
                     >
-                        <motion.div
-                            className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 text-sm font-medium"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                        >
-                            <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-                            Available for new opportunities
-                        </motion.div>
-
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                             <span className="block">Hi, I&apos;m</span>
                             <span className="block gradient-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                Saurabh
+                                Saurabh Chidrewar
                             </span>
                         </h1>
                     </motion.div>
@@ -87,14 +77,16 @@ export default function HeaderSection() {
                         transition={{ duration: 0.8, delay: 0.3 }}
                     >
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white/90">
-                            Full Stack Software Engineer
+                            Software Development Engineer
                         </h2>
 
                         <p className="text-lg sm:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
-                            I craft exceptional digital experiences that make a
-                            real impact. With expertise in both frontend and
-                            backend development, I create seamless, scalable
-                            solutions that solve real-world problems.
+                            I develop innovative solutions that drive business
+                            growth and user engagement. With expertise in
+                            Python, Node.js, React, and Flutter, I create
+                            scalable applications that have increased customer
+                            base by 25% and reduced turnaround time by 20%.
+                            Awarded Outstanding Contributor 2025 at Source.One.
                         </p>
                     </motion.div>
 
@@ -127,14 +119,14 @@ export default function HeaderSection() {
 
                     {/* CTA buttons */}
                     <motion.div
-                        className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
+                        className="flex flex-row justify-center items-center pt-16 mt-12"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.7 }}
                     >
                         <motion.a
                             href="#projects"
-                            className="btn btn-primary text-lg px-8 py-4 shadow-2xl"
+                            className="btn btn-primary text-lg px-8 py-4 shadow-2xl mr-12"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -142,7 +134,7 @@ export default function HeaderSection() {
                         </motion.a>
                         <motion.a
                             href="#contact"
-                            className="btn btn-secondary text-lg px-8 py-4"
+                            className="btn btn-secondary text-lg px-8 py-4 ml-12"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
@@ -152,7 +144,7 @@ export default function HeaderSection() {
                 </div>
             </div>
 
-            {/* Scroll indicator */}
+            {/* Scroll indicator
             <motion.div
                 className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
                 initial={{ opacity: 0, y: 20 }}
@@ -173,7 +165,7 @@ export default function HeaderSection() {
                     </span>
                     <ChevronDown className="w-5 h-5" />
                 </motion.div>
-            </motion.div>
+            </motion.div> */}
         </section>
     );
 }
