@@ -14,7 +14,6 @@ import {
     Sparkles,
 } from "lucide-react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Container, Section } from "@/components/ui/container";
@@ -111,7 +110,7 @@ export default function AboutSection() {
                             {/* Main image container */}
                             <div className="relative h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/me_profile.jpeg"
+                                    src="https://raw.githubusercontent.com/saurabhchidrewar/assets/refs/heads/main/image%20(10).png"
                                     alt={personal.name}
                                     fill
                                     className="object-cover"

@@ -96,7 +96,7 @@ export default function Navigation({ isScrolled }: NavigationProps) {
                         >
                             <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
                                 <img
-                                    src="/app_icon.png"
+                                    src="https://raw.githubusercontent.com/saurabhchidrewar/assets/refs/heads/main/favicon%20(1).png"
                                     alt="SC"
                                     className="w-full h-full object-cover"
                                 />
