@@ -12,6 +12,7 @@ import {
     Users,
     Mail,
     Sparkles,
+    Code,
 } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -218,7 +219,7 @@ export default function AboutSection() {
                                 <Download className="w-5 h-5 mr-2" />
                                 Download Resume
                             </motion.button>
-                            <motion.button
+                            {/* <motion.button
                                 type="button"
                                 className="px-6 py-6 text-base border-2 border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-900 rounded-lg font-medium flex items-center justify-center cursor-pointer transition-all duration-300"
                                 style={{ pointerEvents: "auto" }}
@@ -237,6 +238,25 @@ export default function AboutSection() {
                             >
                                 <Mail className="w-5 h-5 mr-2" />
                                 Get In Touch
+                            </motion.button> */}
+                            <motion.button
+                                type="button"
+                                className="px-6 py-6 text-base bg-gradient-to-r from-violet-500 to-pink-500 hover:from-violet-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg font-medium flex items-center justify-center cursor-pointer"
+                                style={{ pointerEvents: "auto" }}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    console.log("LeetCode clicked!");
+                                    window.open(
+                                        "https://leetcode.com/u/saurabh2621/",
+                                        "_blank"
+                                    );
+                                }}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <Code className="w-5 h-5 mr-2" />
+                                LeetCode Profile
                             </motion.button>
                         </div>
                     </motion.div>

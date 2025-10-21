@@ -13,6 +13,7 @@ import {
     MessageCircle,
     Clock,
     Sparkles,
+    Code,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -110,6 +111,12 @@ Email: ${formData.email}`
             label: "GitHub",
             url: personal.socialLinks.github,
             color: "hover:text-gray-800",
+        },
+        {
+            icon: Code,
+            label: "LeetCode",
+            url: "https://leetcode.com/u/saurabh2621/",
+            color: "hover:text-orange-500",
         },
         {
             icon: Twitter,
