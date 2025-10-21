@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Software Development Engineer - 1",
+        "company": "Source.One",
+        "location": "Pune, India",
+        "period": "July 2023 - Present",
+        "duration": "2.5+ years",
+        "type": "Full-time",
+        "description": "Architecting and developing scalable systems that power core business operations. Building distributed web and mobile platforms using Python, Node.js, React, and Flutter, with a focus on backend performance, reliability, and intelligent automation through machine learning.",
+        "achievements": [
+            "Designed and developed a production-grade mobile application enabling polymer traders to transact online — scaling to 10k+ active users and contributing to a 23% increase in monthly order volume.",
+            "Architected and optimized API infrastructure using Node.js and Redis caching, achieving a 20% reduction in average response latency and improving backend throughput under high concurrency.",
+            "Built an internal ticketing and workflow automation system integrated with Grafana metrics and alerting pipelines; introduced autocut-based monitoring to proactively identify latency spikes, improving system uptime by 40%.",
+            "Developed and deployed a machine learning model using Python’s HistGradientBoostingRegressor to forecast logistics expenses, integrating Recency Weighting and achieving ~92% prediction accuracy on historical data.",
+            "Implemented an automated acceptance testing suite using Pytest and CI pipelines, reducing regression cycles by 35% and improving release confidence.",
+            "Worked across product, design, and infrastructure teams in an agile setup, driving 0→1 launches and optimizing release cadence."
+        ],
+        "technologies": [
+            "Python",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Flutter",
+            "React",
+            "Redis",
+            "Apache Kafka",
+            "Grafana",
+            "Machine Learning (scikit-learn, pandas, numpy, seaborn)"
+        ],
+        "highlights": [
+            {
+                "metric": "23%",
+                "description": "increase in monthly order volume"
+            },
+            {
+                "metric": "20%",
+                "description": "reduction in API response latency"
+            },
+            {
+                "metric": "40%",
+                "description": "improvement in system uptime and support efficiency"
+            }
+        ]
+    },
+    {
+        "title": "Software Development Engineer Intern",
+        "company": "Source.One",
+        "location": "Pune, India",
+        "period": "January 2023 - May 2023",
+        "duration": "6 months",
+        "type": "Internship",
+        "description": "Contributed to the development of internal mobility and tracking solutions using Flutter, Node.js, and MongoDB. Focused on building performant, data-synced mobile app that enhanced operational visibility for on-field teams.",
+        "achievements": [
+            "Developed and deployed a Flutter-based application to track and monitor on-field employees, integrating GPS-based location tracking and real-time visit logs.",
+            "Designed REST APIs and MongoDB schemas to support seamless two-way sync between mobile and backend systems, ensuring data consistency across platforms.",
+            "Implemented a custom search and caching mechanism for potential client lookup, reducing query latency by over 15%.",
+            "Collaborated closely with the product and backend teams to define API contracts, ensuring smooth data flow and minimal sync conflicts."
+        ],
+        "technologies": [
+            "Flutter",
+            "Node.js",
+            "MongoDB",
+            "Express.js",
+            "JavaScript",
+            "REST APIs"
+        ],
+        "highlights": [
+            {
+                "metric": "15%",
+                "description": "reduction in query latency"
+            },
+            {
+                "metric": "100%",
+                "description": "end-to-end ownership of mobile app module"
+            }
+        ]
+    },
+    {
+        "title": "Summer Intern",
+        "company": "Siemens",
+        "location": "Pune, India",
+        "period": "May 2022 - July 2022",
+        "duration": "3 months",
+        "type": "Internship",
+        "description": "Contributed to improving the usability of Siemens Teamcenter (Product Lifecycle Management software) by designing and implementing guided navigation features using ReactJS. Focused on enhancing user efficiency and discoverability across complex workflows.",
+        "achievements": [
+            "Redesigned the navigation architecture for Teamcenter, enabling users to seamlessly traverse multi-level PLM workflows with contextual guidance.",
+            "Developed an interactive guided navigation module using ReactJS and ReactTour to simplify user onboarding and reduce task completion time.",
+            "Optimized search and navigation flows, improving feature discoverability and user efficiency by over 20%.",
+            "Collaborated with UX and backend teams to align UI behavior with Teamcenter’s data models and improve component reusability."
+        ],
+        "technologies": ["ReactJS", "ReactTour", "JavaScript", "HTML5", "CSS3"],
+        "highlights": [
+            {
+                "metric": "20%",
+                "description": "improvement in feature discoverability and task completion efficiency"
+            }
+        ]
+    }
+]

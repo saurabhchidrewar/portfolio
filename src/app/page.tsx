@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import HeaderSection from "@/components/HeaderSection";
 import AboutSection from "@/components/AboutSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import EducationSection from "@/components/EducationSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import AwardsSection from "@/components/AwardsSection";
@@ -24,44 +24,36 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="relative min-h-screen">
-            {/* Animated background shapes */}
-            {Array.from({ length: 5 }).map((_, index) => (
-                <motion.div
-                    key={index}
-                    className="absolute w-72 h-72 rounded-full opacity-10"
-                    style={{
-                        left: index * 200,
-                        top: index * 100,
-                        background: "linear-gradient(135deg, #6C63FF, #4F46E5)",
-                    }}
-                    animate={{
-                        scale: [0.8, 1.2, 0.8],
-                        opacity: [0.3, 0.1, 0.3],
-                    }}
-                    transition={{
-                        duration: 3 + index,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                    }}
-                />
-            ))}
-
+        <main className="relative min-h-screen bg-white">
             {/* Navigation */}
             <Navigation isScrolled={isScrolled} />
 
             {/* Main content */}
-            <div className="relative z-10">
+            <div className="relative">
                 <section id="home">
                     <HeaderSection />
                 </section>
                 <AboutSection />
                 <ExperienceSection />
+                <EducationSection />
                 <SkillsSection />
                 <ProjectsSection />
                 <AwardsSection />
                 <ContactSection />
             </div>
+
+            {/* Footer */}
+            <footer className="bg-slate-950 text-white py-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p className="text-white/60">
+                        © {new Date().getFullYear()} Saurabh Chidrewar. All
+                        rights reserved.
+                    </p>
+                    <p className="text-white/40 text-sm mt-2">
+                        Built with Next.js, TypeScript, and Tailwind CSS
+                    </p>
+                </div>
+            </footer>
         </main>
     );
 }

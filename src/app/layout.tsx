@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         siteName: "Saurabh Chidrewar Portfolio",
         images: [
             {
-                url: "/og-image.jpg",
+                url: "/me_profile.jpeg",
                 width: 1200,
                 height: 630,
                 alt: "Saurabh Chidrewar - Full Stack Software Engineer",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         title: "Saurabh Chidrewar - Full Stack Software Engineer",
         description:
             "Portfolio of Saurabh Chidrewar, a Full Stack Software Engineer with expertise in React, Node.js, and cloud technologies.",
-        images: ["/og-image.jpg"],
+        images: ["/me_profile.jpeg"],
     },
     robots: {
         index: true,
