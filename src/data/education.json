@@ -1,0 +1,16 @@
+[
+    {
+        "degree": "Bachelor of Engineering",
+        "field": "Electronics and Telecommunication",
+        "institution": "Pune Institute of Computer Technology (PICT)",
+        "location": "Pune, India",
+        "period": "2019 - 2023",
+        "cgpa": "9.3/10",
+        "achievements": [
+            "Graduated with a CGPA of 9.3/10, ranked among the top performers in the department.",
+            "Served as Media and Outreach Lead for the CodeChef PICT Chapter, driving 4x growth in coding event participation through strategic initiatives.",
+            "Qualified and participated in the ACM-ICPC Regional Round, solving advanced algorithmic and optimization problems under timed constraints.",
+            "Conducted multiple Special Interest Groups (SIGs) on Python and data structures, mentoring over 200 students and fostering peer-led learning."
+        ]
+    }
+]

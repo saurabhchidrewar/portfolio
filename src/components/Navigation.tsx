@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu,
@@ -9,71 +9,47 @@ import {
     User,
     Briefcase,
     Code,
-    FolderOpen,
     Award,
+    GraduationCap,
     Mail,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface NavigationProps {
     isScrolled: boolean;
 }
 
 export default function Navigation({ isScrolled }: NavigationProps) {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("home");
 
-    const navItems = useMemo(
-        () => [
-            { label: "Home", index: 0, icon: Home, href: "#home" },
-            { label: "About", index: 1, icon: User, href: "#about" },
-            {
-                label: "Experience",
-                index: 2,
-                icon: Briefcase,
-                href: "#experience",
-            },
-            { label: "Skills", index: 3, icon: Code, href: "#skills" },
-            {
-                label: "Projects",
-                index: 4,
-                icon: FolderOpen,
-                href: "#projects",
-            },
-            { label: "Awards", index: 5, icon: Award, href: "#awards" },
-            { label: "Contact", index: 6, icon: Mail, href: "#contact" },
-        ],
-        []
-    );
+    const navItems = [
+        { id: "home", label: "Home", icon: Home },
+        { id: "about", label: "About", icon: User },
+        { id: "experience", label: "Experience", icon: Briefcase },
+        { id: "education", label: "Education", icon: GraduationCap },
+        { id: "skills", label: "Skills", icon: Code },
+        { id: "projects", label: "Projects", icon: Code },
+        { id: "awards", label: "Awards", icon: Award },
+        { id: "contact", label: "Contact", icon: Mail },
+    ];
 
-    const scrollToSection = (index: number) => {
-        const sections = [
-            "home",
-            "about",
-            "experience",
-            "skills",
-            "projects",
-            "awards",
-            "contact",
-        ];
-
-        const targetSection = document.getElementById(sections[index]);
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: "smooth" });
-        }
-        setIsMenuOpen(false);
-    };
-
-    // Track active section based on scroll position
     useEffect(() => {
         const handleScroll = () => {
-            const sections = navItems.map((item) =>
-                document.getElementById(item.href.substring(1))
-            );
+            const sections = navItems.map((item) => ({
+                id: item.id,
+                element: document.getElementById(item.id),
+            }));
+
             const scrollPosition = window.scrollY + 100;
 
             for (let i = sections.length - 1; i >= 0; i--) {
-                if (sections[i] && sections[i]!.offsetTop <= scrollPosition) {
-                    setActiveSection(i);
+                const section = sections[i];
+                if (
+                    section.element &&
+                    section.element.offsetTop <= scrollPosition
+                ) {
+                    setActiveSection(section.id);
                     break;
                 }
             }
@@ -81,162 +57,150 @@ export default function Navigation({ isScrolled }: NavigationProps) {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [navItems]);
+    }, []);
+
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const offset = 80;
+            const elementPosition = element.offsetTop - offset;
+            window.scrollTo({
+                top: elementPosition,
+                behavior: "smooth",
+            });
+        }
+        setIsOpen(false);
+    };
 
     return (
         <>
-            {/* Desktop Navigation */}
+            {/* Desktop & Mobile Navigation */}
             <motion.nav
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                     isScrolled
-                        ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-gray-200/50"
+                        ? "bg-white/95 backdrop-blur-md shadow-lg"
                         : "bg-transparent"
                 }`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.5 }}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16 lg:h-20">
+                    <div className="flex items-center justify-between h-20">
                         {/* Logo */}
-                        <motion.div
-                            className="flex items-center space-x-2"
+                        <motion.button
+                            onClick={() => scrollToSection("home")}
+                            className="flex items-center space-x-2 group"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                         >
-                            <div
-                                className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg ${
-                                    isScrolled
-                                        ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
-                                        : "bg-white/20 backdrop-blur-sm text-white border border-white/30"
+                            <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow">
+                                <img
+                                    src="/app_icon.png"
+                                    alt="SC"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <span
+                                className={`text-xl font-bold transition-colors ${
+                                    isScrolled ? "text-gray-900" : "text-white"
                                 }`}
                             >
-                                SC
-                            </div>
-                            {isScrolled && (
-                                <span className="hidden sm:block text-xl font-bold text-gray-800">
-                                    Saurabh
-                                </span>
-                            )}
-                        </motion.div>
+                                Saurabh Chidrewar
+                            </span>
+                        </motion.button>
 
-                        {/* Desktop Menu */}
-                        <div className="hidden lg:flex items-center space-x-1">
-                            {navItems.map((item) => (
+                        {/* Desktop Navigation */}
+                        <div className="hidden lg:flex items-center space-x-2">
+                            {navItems.map((item, index) => (
                                 <motion.button
-                                    key={item.label}
-                                    onClick={() => scrollToSection(item.index)}
-                                    className={`relative px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
-                                        activeSection === item.index
+                                    key={item.id}
+                                    onClick={() => scrollToSection(item.id)}
+                                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                                        activeSection === item.id
                                             ? isScrolled
-                                                ? "text-indigo-600 bg-indigo-50"
-                                                : "text-white bg-white/20"
+                                                ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md"
+                                                : "bg-white/20 backdrop-blur-md text-white"
                                             : isScrolled
-                                            ? "text-gray-600 hover:text-indigo-600 hover:bg-gray-50"
-                                            : "text-white/80 hover:text-white hover:bg-white/10"
+                                            ? "text-gray-700 hover:bg-gray-100"
+                                            : "text-white/80 hover:bg-white/10"
                                     }`}
+                                    initial={{ opacity: 0, y: -20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     {item.label}
-                                    {activeSection === item.index && (
-                                        <motion.div
-                                            className={`absolute bottom-0 left-1/2 w-1 h-1 rounded-full ${
-                                                isScrolled
-                                                    ? "bg-indigo-600"
-                                                    : "bg-white"
-                                            }`}
-                                            layoutId="activeIndicator"
-                                            initial={false}
-                                            transition={{
-                                                type: "spring",
-                                                stiffness: 500,
-                                                damping: 30,
-                                            }}
-                                        />
-                                    )}
                                 </motion.button>
                             ))}
                         </div>
 
                         {/* Mobile Menu Button */}
-                        <motion.button
-                            className="lg:hidden p-2 rounded-xl transition-colors"
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            style={{
-                                color: isScrolled ? "#6366f1" : "white",
-                                backgroundColor: isScrolled
-                                    ? "#f3f4f6"
-                                    : "rgba(255,255,255,0.1)",
-                            }}
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className={`lg:hidden p-2 rounded-lg transition-colors ${
+                                isScrolled
+                                    ? "text-gray-900 hover:bg-gray-100"
+                                    : "text-white hover:bg-white/10"
+                            }`}
                         >
-                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </motion.button>
+                            {isOpen ? (
+                                <X className="w-6 h-6" />
+                            ) : (
+                                <Menu className="w-6 h-6" />
+                            )}
+                        </button>
                     </div>
                 </div>
             </motion.nav>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Menu */}
             <AnimatePresence>
-                {isMenuOpen && (
-                    <>
+                {isOpen && (
+                    <motion.div
+                        className="fixed inset-0 z-40 lg:hidden"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
                         {/* Backdrop */}
-                        <motion.div
-                            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setIsMenuOpen(false)}
+                        <div
+                            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                            onClick={() => setIsOpen(false)}
                         />
 
-                        {/* Mobile Menu */}
+                        {/* Menu Panel */}
                         <motion.div
-                            className="fixed top-20 left-4 right-4 z-50 bg-white rounded-2xl shadow-2xl p-6 lg:hidden"
-                            initial={{ opacity: 0, scale: 0.95, y: -20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.95, y: -20 }}
-                            transition={{ duration: 0.3, ease: "easeOut" }}
+                            className="absolute top-20 right-4 left-4 bg-white rounded-2xl shadow-2xl overflow-hidden"
+                            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                            transition={{ duration: 0.2 }}
                         >
-                            <div className="space-y-2">
+                            <div className="p-4 space-y-2">
                                 {navItems.map((item, index) => (
                                     <motion.button
-                                        key={item.label}
-                                        onClick={() =>
-                                            scrollToSection(item.index)
-                                        }
-                                        className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-left transition-all duration-300 ${
-                                            activeSection === item.index
-                                                ? "bg-indigo-50 text-indigo-600"
-                                                : "text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+                                        key={item.id}
+                                        onClick={() => scrollToSection(item.id)}
+                                        className={`w-full flex items-center space-x-3 px-4 py-3 rounded-xl font-medium transition-all ${
+                                            activeSection === item.id
+                                                ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md"
+                                                : "text-gray-700 hover:bg-gray-100"
                                         }`}
-                                        whileHover={{ x: 4 }}
-                                        whileTap={{ scale: 0.98 }}
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        transition={{
-                                            duration: 0.3,
-                                            delay: index * 0.1,
-                                        }}
+                                        transition={{ delay: index * 0.05 }}
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
                                     >
                                         <item.icon className="w-5 h-5" />
-                                        <span className="font-medium">
-                                            {item.label}
-                                        </span>
-                                        {activeSection === item.index && (
-                                            <motion.div
-                                                className="w-2 h-2 bg-indigo-600 rounded-full ml-auto"
-                                                initial={{ scale: 0 }}
-                                                animate={{ scale: 1 }}
-                                                transition={{ duration: 0.2 }}
-                                            />
-                                        )}
+                                        <span>{item.label}</span>
                                     </motion.button>
                                 ))}
                             </div>
                         </motion.div>
-                    </>
+                    </motion.div>
                 )}
             </AnimatePresence>
         </>

@@ -1,122 +1,228 @@
-# Saurabh Chidrewar - Portfolio
+# Saurabh Chidrewar - Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases my skills, experience, projects, and achievements as a Full Stack Software Engineer.
+A modern, professional portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases my work experience, projects, skills, and achievements in a visually stunning and responsive design.
 
-## 🚀 Features
+## ✨ Features
 
-- **Modern Design**: Clean, professional design with smooth animations
-- **Responsive**: Fully responsive layout that works on all devices
-- **Fast Performance**: Optimized for speed and SEO
-- **Interactive**: Smooth scrolling navigation and hover effects
-- **Accessible**: Built with accessibility best practices
-- **SEO Optimized**: Meta tags and structured data for better search visibility
+-   **Modern Design**: Clean, professional UI with smooth animations and transitions
+-   **Fully Responsive**: Optimized for all device sizes from mobile to desktop
+-   **Data-Driven**: All content is managed through JSON files for easy updates
+-   **Type-Safe**: Built with TypeScript for better development experience
+-   **Performance Optimized**: Fast loading times with Next.js optimizations
+-   **Smooth Animations**: Interactive elements with Framer Motion
+-   **SEO Friendly**: Optimized for search engines
+
+## 🚀 Sections
+
+1. **Hero Section**: Eye-catching introduction with animated background
+2. **About**: Personal information and expertise areas
+3. **Experience**: Professional work history with achievements
+4. **Education**: Academic background and accomplishments
+5. **Skills**: Technical skills with proficiency levels
+6. **Projects**: Featured projects with live demos and source code
+7. **Awards**: Recognition and achievements
+8. **Contact**: Get in touch form with social links
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Deployment**: GitHub Pages
+-   **Framework**: Next.js 14
+-   **Language**: TypeScript
+-   **Styling**: Tailwind CSS
+-   **Animations**: Framer Motion
+-   **Icons**: Lucide React
+-   **UI Components**: Custom components with shadcn/ui
 
-## 📦 Sections
+## 📁 Project Structure
 
-- **Header**: Hero section with introduction and call-to-action
-- **About**: Personal information, profile image, and download CV
-- **Experience**: Professional work experience and achievements
-- **Skills**: Technical skills with proficiency levels
-- **Projects**: Showcase of recent projects with live demos
-- **Awards**: Recognition and achievements
-- **Contact**: Contact form and social media links
+```
+saurabh_portfolio/
+├── src/
+│   ├── app/
+│   │   ├── globals.css          # Global styles
+│   │   ├── layout.tsx           # Root layout
+│   │   └── page.tsx             # Home page
+│   ├── components/
+│   │   ├── HeaderSection.tsx    # Hero section
+│   │   ├── AboutSection.tsx     # About section
+│   │   ├── ExperienceSection.tsx # Experience section
+│   │   ├── EducationSection.tsx  # Education section
+│   │   ├── SkillsSection.tsx    # Skills section
+│   │   ├── ProjectsSection.tsx  # Projects section
+│   │   ├── AwardsSection.tsx    # Awards section
+│   │   ├── ContactSection.tsx   # Contact section
+│   │   ├── Navigation.tsx       # Navigation bar
+│   │   └── ui/                  # Reusable UI components
+│   ├── data/
+│   │   ├── personal.json        # Personal information
+│   │   ├── experience.json      # Work experience
+│   │   ├── education.json       # Education details
+│   │   ├── skills.json          # Technical skills
+│   │   ├── projects.json        # Project portfolio
+│   │   └── awards.json          # Awards and achievements
+│   ├── types/
+│   │   └── index.ts             # TypeScript type definitions
+│   └── lib/
+│       └── utils.ts             # Utility functions
+├── public/                      # Static assets
+└── package.json                 # Dependencies
+```
 
-## 🚀 Getting Started
+## 🎨 Data Management
+
+All content is stored in JSON files in the `src/data/` directory. This makes it easy to update your portfolio without touching the code:
+
+-   `personal.json`: Your name, title, contact info, and social links
+-   `experience.json`: Work history with achievements and technologies
+-   `education.json`: Academic background and accomplishments
+-   `skills.json`: Technical skills organized by category
+-   `projects.json`: Portfolio projects with descriptions and links
+-   `awards.json`: Awards and recognition
+
+### Updating Content
+
+1. Navigate to the appropriate JSON file in `src/data/`
+2. Update the data following the existing structure
+3. Save the file - changes will be reflected immediately in development mode
+
+## 🚦 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn
+-   Node.js 18+
+-   npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/saurabhchidrewar/saurabh_portfolio.git
 cd saurabh_portfolio
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
+# or
+yarn install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
+# or
+yarn dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## 🏗️ Building for Production
+### Build for Production
 
 ```bash
 npm run build
+npm start
+# or
+yarn build
+yarn start
 ```
 
-This will create an optimized production build in the `out` directory.
+## 📝 Customization Guide
 
-## 📱 Deployment
+### 1. Update Personal Information
 
-This project is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+Edit `src/data/personal.json`:
 
-### Manual Deployment
-
-1. Build the project:
-```bash
-npm run build
+```json
+{
+  "name": "Your Name",
+  "title": "Your Title",
+  "email": "your.email@example.com",
+  ...
+}
 ```
 
-2. The static files will be generated in the `out` directory.
+### 2. Add New Project
 
-3. Deploy the contents of the `out` directory to your hosting service.
+Edit `src/data/projects.json`:
 
-## 🎨 Customization
+```json
+{
+  "title": "Project Name",
+  "description": "Project description",
+  "technologies": ["Tech1", "Tech2"],
+  "githubLink": "https://github.com/...",
+  "liveLink": "https://...",
+  ...
+}
+```
 
-### Personal Information
+### 3. Update Experience
 
-Update your personal information in the respective component files:
-- `src/components/HeaderSection.tsx` - Update your name and summary
-- `src/components/AboutSection.tsx` - Modify your bio and profile image
-- `src/components/ExperienceSection.tsx` - Update your work experience
-- `src/components/ProjectsSection.tsx` - Add your projects
-- `src/components/ContactSection.tsx` - Update contact information
+Edit `src/data/experience.json` to add or modify work experience entries.
 
-### Styling
+### 4. Modify Skills
 
-- Modify colors in `tailwind.config.js`
-- Update global styles in `src/app/globals.css`
-- Customize component styles in individual component files
+Edit `src/data/skills.json` to update your technical skills and proficiency levels.
 
-### Content
+### 5. Update Awards
 
-- Add your projects in `src/components/ProjectsSection.tsx`
-- Update skills in `src/components/SkillsSection.tsx`
-- Modify awards in `src/components/AwardsSection.tsx`
+Edit `src/data/awards.json` to showcase your achievements and recognition.
+
+## 🎨 Color Scheme
+
+The portfolio uses a modern color palette:
+
+-   Primary: Blue (#2563EB)
+-   Secondary: Indigo (#4F46E5)
+-   Accent: Purple (#7C3AED)
+-   Success: Green (#10B981)
+-   Warning: Orange (#F97316)
+
+Gradients are used throughout for a modern, professional look.
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints:
+
+-   Mobile: < 640px
+-   Tablet: 640px - 1024px
+-   Desktop: > 1024px
+
+## 🔧 Development
+
+### Available Scripts
+
+-   `npm run dev` - Start development server
+-   `npm run build` - Build for production
+-   `npm run start` - Start production server
+-   `npm run lint` - Run ESLint
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open source and available under the MIT License.
 
 ## 🤝 Contributing
 
-Feel free to submit issues and enhancement requests!
+Contributions, issues, and feature requests are welcome!
 
 ## 📞 Contact
 
-Saurabh Chidrewar - [saurabh.c@source.one](mailto:saurabh.c@source.one)
+Saurabh Chidrewar
 
-Project Link: [https://github.com/saurabhchidrewar/saurabh_portfolio](https://github.com/saurabhchidrewar/saurabh_portfolio)
+-   Email: saurabh.c@source.one
+-   LinkedIn: [linkedin.com/in/saurabhchidrewar](https://linkedin.com/in/saurabhchidrewar)
+-   GitHub: [github.com/saurabhchidrewar](https://github.com/saurabhchidrewar)
+
+## 🌟 Acknowledgments
+
+-   Design inspiration from modern portfolio websites
+-   Built with [Next.js](https://nextjs.org/)
+-   UI components from [shadcn/ui](https://ui.shadcn.com/)
+-   Icons from [Lucide](https://lucide.dev/)
+-   Animations with [Framer Motion](https://www.framer.com/motion/)
 
 ---
 
-⭐ Star this repository if you found it helpful!
+Made with ❤️ by Saurabh Chidrewar

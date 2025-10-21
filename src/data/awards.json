@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Outstanding Contributor Award",
+        "subtitle": "Employee of the Year 2025",
+        "company": "Source.One",
+        "description": "Received the Outstanding Contributor Award, equivalent to the Employee of the Year 2025, for exceptional performance and impact at Source.One.",
+        "icon": "Trophy",
+        "year": "2025",
+        "category": "Leadership"
+    },
+    {
+        "title": "Best Youngster Award",
+        "subtitle": "Best Performer – Q1 2024",
+        "company": "Source.One",
+        "description": "Honored with the Best Youngster Award and Best Performer – Q1 2024 for leadership potential and consistent delivery at Source.One.",
+        "icon": "Star",
+        "year": "2024",
+        "category": "Performance"
+    },
+    {
+        "title": "ACM-ICPC Regional Round",
+        "subtitle": "Competitive Programming",
+        "company": "Pune-Gwalior Regional",
+        "description": "Competed in ACM-ICPC Pune-Gwalior Regional Round and secured Rank 251, demonstrating strong problem-solving and algorithmic skills.",
+        "icon": "Brain",
+        "year": "2022",
+        "category": "Competition"
+    },
+    {
+        "title": "Codechef September Starters",
+        "subtitle": "Coding Competition",
+        "company": "Codechef",
+        "description": "Secured rank of 73/8048 in Codechef September Starters 2021, showcasing exceptional coding and problem-solving abilities.",
+        "icon": "TrendingUp",
+        "year": "2021",
+        "category": "Coding"
+    }
+]

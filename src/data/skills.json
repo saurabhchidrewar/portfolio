@@ -1,0 +1,59 @@
+{
+    "categories": [
+        {
+            "title": "Programming Languages",
+            "icon": "Code",
+            "skills": [
+                { "name": "Python", "level": 95, "years": "2+" },
+                { "name": "JavaScript", "level": 92, "years": "3+" },
+                { "name": "TypeScript", "level": 88, "years": "2+" },
+                { "name": "Dart", "level": 85, "years": "1+" },
+                { "name": "C++", "level": 80, "years": "2+" },
+                { "name": "Go", "level": 75, "years": "1+" },
+                { "name": "Java", "level": 78, "years": "2+" }
+            ]
+        },
+        {
+            "title": "Frameworks & Libraries",
+            "icon": "Database",
+            "skills": [
+                { "name": "Node.js", "level": 90, "years": "2+" },
+                { "name": "Express.js", "level": 88, "years": "2+" },
+                { "name": "React", "level": 85, "years": "2+" },
+                { "name": "Next.js", "level": 82, "years": "1+" },
+                { "name": "Flutter", "level": 88, "years": "1+" },
+                { "name": "Numpy", "level": 82, "years": "1+" },
+                { "name": "Pandas", "level": 80, "years": "1+" }
+            ]
+        },
+        {
+            "title": "Databases",
+            "icon": "Cloud",
+            "skills": [
+                { "name": "MongoDB", "level": 90, "years": "2+" },
+                { "name": "MySQL", "level": 85, "years": "2+" },
+                { "name": "PostgreSQL", "level": 80, "years": "1+" },
+                { "name": "SQLite", "level": 75, "years": "1+" }
+            ]
+        },
+        {
+            "title": "Tools & Platforms",
+            "icon": "Wrench",
+            "skills": [
+                { "name": "Git", "level": 90, "years": "3+" },
+                { "name": "GitHub", "level": 88, "years": "3+" },
+                { "name": "Linux", "level": 85, "years": "2+" },
+                { "name": "Postman", "level": 82, "years": "2+" },
+                { "name": "Heroku", "level": 80, "years": "1+" },
+                { "name": "Agile/Scrum", "level": 88, "years": "2+" }
+            ]
+        }
+    ],
+    "topSkills": [
+        { "name": "Python", "level": 95, "icon": "🐍" },
+        { "name": "Node.js", "level": 90, "icon": "🟢" },
+        { "name": "MongoDB", "level": 90, "icon": "🍃" },
+        { "name": "Flutter", "level": 88, "icon": "📱" },
+        { "name": "React", "level": 85, "icon": "⚛️" }
+    ]
+}

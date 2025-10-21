@@ -1,0 +1,23 @@
+{
+    "name": "Saurabh Chidrewar",
+    "title": "Software Development Engineer",
+    "subtitle": "Full Stack Developer & Problem Solver",
+    "tagline": "I develop innovative solutions that drive business growth and user engagement.",
+    "bio": "I’m a Software Development Engineer with over 3 years of experience, where I build innovative solutions that accelerate business growth. My expertise spans Python, JavaScript, TypeScript, and Flutter, with a strong foundation in machine learning.",
+    "location": "Pune, India",
+    "email": "saurabhchidrewar5@gmail.com",
+    "phone": "+91 7588114817",
+    "availability": "Available to connect",
+    "resumeUrl": "https://drive.google.com/file/d/1OyCxApyJ5QsEJRGXsizoK2fToYLbg_at/view?usp=sharing",
+    "socialLinks": {
+        "linkedin": "https://linkedin.com/in/saurabhchidrewar",
+        "github": "https://github.com/saurabhchidrewar",
+        "twitter": "https://x.com/csaurabhoffical"
+    },
+    "highlights": [
+        "3+ years of experience",
+        "25% customer base increase",
+        "20% turnaround time reduction",
+        "Web & Mobile App Developer"
+    ]
+}
