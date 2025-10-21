@@ -120,6 +120,22 @@ export default function RootLayout({
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
+
+                {/* GoatCounter Analytics */}
+                <script
+                    data-goatcounter="https://saurabhchidrewar.goatcounter.com/count"
+                    async
+                    src="//gc.zgo.at/count.js"
+                />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.goatcounter = {
+                                ignore: function() { return location.hostname === "localhost"; }
+                            }
+                        `,
+                    }}
+                />
             </head>
             <body className={inter.className}>{children}</body>
         </html>
