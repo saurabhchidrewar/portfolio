@@ -29,30 +29,97 @@ export default function AwardsSection() {
         TrendingUp,
     };
 
-    const colorMap: Record<
-        string,
-        { gradient: string; bg: string; text: string }
-    > = {
-        Trophy: {
+    // Dynamic color palette for random selection
+    const colorPalettes = [
+        {
             gradient: "from-yellow-400 to-orange-500",
             bg: "bg-yellow-50",
             text: "text-yellow-600",
         },
-        Star: {
+        {
             gradient: "from-green-400 to-emerald-500",
             bg: "bg-green-50",
             text: "text-green-600",
         },
-        Brain: {
+        {
             gradient: "from-blue-400 to-cyan-500",
             bg: "bg-blue-50",
             text: "text-blue-600",
         },
-        TrendingUp: {
+        {
             gradient: "from-purple-400 to-pink-500",
             bg: "bg-purple-50",
             text: "text-purple-600",
         },
+        {
+            gradient: "from-red-400 to-pink-500",
+            bg: "bg-red-50",
+            text: "text-red-600",
+        },
+        {
+            gradient: "from-indigo-400 to-purple-500",
+            bg: "bg-indigo-50",
+            text: "text-indigo-600",
+        },
+        {
+            gradient: "from-teal-400 to-cyan-500",
+            bg: "bg-teal-50",
+            text: "text-teal-600",
+        },
+        {
+            gradient: "from-rose-400 to-pink-500",
+            bg: "bg-rose-50",
+            text: "text-rose-600",
+        },
+    ];
+
+    // Generate consistent colors for each award based on index
+    const getAwardColors = (index: number) => {
+        return colorPalettes[index % colorPalettes.length];
+    };
+
+    // Generate random rotation for icons
+    const getIconRotation = (index: number) => {
+        const rotations = [
+            "rotate-0",
+            "rotate-12",
+            "-rotate-12",
+            "rotate-6",
+            "-rotate-6",
+            "rotate-3",
+            "-rotate-3",
+        ];
+        return rotations[index % rotations.length];
+    };
+
+    // Generate random hover animation
+    const getHoverAnimation = (index: number) => {
+        const animations = [
+            { scale: 1.05, rotate: 5 },
+            { scale: 1.08, rotate: -3 },
+            { scale: 1.06, rotate: 8 },
+            { scale: 1.07, rotate: -5 },
+            { scale: 1.04, rotate: 3 },
+            { scale: 1.09, rotate: -8 },
+            { scale: 1.05, rotate: 6 },
+            { scale: 1.06, rotate: -4 },
+        ];
+        return animations[index % animations.length];
+    };
+
+    // Generate random orb position
+    const getOrbPosition = (index: number) => {
+        const positions = [
+            "-top-16 -right-16",
+            "-top-12 -right-20",
+            "-top-20 -right-12",
+            "-top-14 -right-18",
+            "-top-18 -right-14",
+            "-top-16 -right-20",
+            "-top-20 -right-16",
+            "-top-12 -right-16",
+        ];
+        return positions[index % positions.length];
     };
 
     return (
@@ -84,7 +151,10 @@ export default function AwardsSection() {
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
                     {awards.map((award, index) => {
                         const IconComponent = iconMap[award.icon];
-                        const colors = colorMap[award.icon];
+                        const colors = getAwardColors(index);
+                        const iconRotation = getIconRotation(index);
+                        const hoverAnimation = getHoverAnimation(index);
+                        const orbPosition = getOrbPosition(index);
 
                         return (
                             <motion.div
@@ -105,7 +175,7 @@ export default function AwardsSection() {
 
                                     {/* Decorative gradient orb */}
                                     <div
-                                        className={`absolute -top-16 -right-16 w-40 h-40 bg-gradient-to-br ${colors.gradient} opacity-5 rounded-full group-hover:scale-150 transition-transform duration-700`}
+                                        className={`absolute ${orbPosition} w-40 h-40 bg-gradient-to-br ${colors.gradient} opacity-5 rounded-full group-hover:scale-150 transition-transform duration-700`}
                                     ></div>
 
                                     <div className="p-8 space-y-6 relative z-10">
@@ -114,10 +184,10 @@ export default function AwardsSection() {
                                             <div className="flex items-start space-x-4 flex-1">
                                                 <motion.div
                                                     className={`p-4 rounded-2xl ${colors.bg} group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                                                    whileHover={{ rotate: 5 }}
+                                                    whileHover={hoverAnimation}
                                                 >
                                                     <IconComponent
-                                                        className={`w-8 h-8 ${colors.text}`}
+                                                        className={`w-8 h-8 ${colors.text} ${iconRotation} transition-transform duration-300`}
                                                     />
                                                 </motion.div>
                                                 <div className="flex-1">
