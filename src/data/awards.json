@@ -1,5 +1,23 @@
 [
     {
+        "title": "AI Impact Award",
+        "subtitle": "Employee of the Year 2025",
+        "company": "Source.One",
+        "description": "Received the AI Impact Award for developing a machine learning solution that automated logistics cost prediction between routes, significantly reducing manual effort and improving operational efficiency",
+        "icon": "Trophy",
+        "year": "2025",
+        "category": "Artificial Intelligence"
+    },
+    {
+        "title": "Growth Catalyst Award",
+        "subtitle": "Category - Revenue Generation",
+        "company": "Source.One",
+        "description": "Received the Growth Catalyst Award for exceptional performance in driving revenue growth and business impact through strategic project campaigns.",
+        "icon": "Trophy",
+        "year": "2025",
+        "category": "Mentorship"
+    },
+    {
         "title": "Outstanding Contributor Award",
         "subtitle": "Employee of the Year 2025",
         "company": "Source.One",
