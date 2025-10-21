@@ -44,12 +44,13 @@ export default function HeaderSection() {
             </div>
 
             <Container size="lg" className="relative z-10">
-                <div className="flex flex-col items-center text-center space-y-8">
+                <div className="flex flex-col items-center text-center space-y-8 pt-20 sm:pt-24">
                     {/* Floating badge */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
+                        className="relative z-10"
                     >
                         <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white/90 text-sm font-medium">
                             <Sparkles className="w-4 h-4 mr-2 text-yellow-300" />
@@ -154,7 +155,7 @@ export default function HeaderSection() {
 
                     {/* Scroll indicator */}
                     <motion.div
-                        className="absolute bottom-8 right-1/12 transform -translate-x-1/2"
+                        className="absolute bottom-8 right-8 sm:right-12"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 1.2 }}
