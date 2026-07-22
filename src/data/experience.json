@@ -1,5 +1,48 @@
 [
     {
+  "title": "Software Development Engineer II (L5)",
+  "company": "Amazon",
+  "location": "Hyderabad, India",
+  "period": "March 2026 - Present",
+  "duration": "4+ months",
+  "type": "Full-time",
+  "description": "Building AI-powered backend systems for Amazon Business Marketing Tech that automate marketing campaign validation using large language models. Designing scalable Java microservices and intelligent validation pipelines by combining Amazon Bedrock, deterministic business rules, and distributed cloud infrastructure.",
+  "achievements": [
+    "Designed and developed an AI-powered campaign validation agent leveraging Amazon Bedrock and internal content validation services to automatically review marketing campaigns before launch.",
+    "Improved automated campaign validation efficiency from 8% to 27%, significantly reducing manual review effort and enabling marketers to scale campaign creation with faster go-to-market execution.",
+    "Built scalable backend services using Java, Spring Boot, Coral, and DynamoDB, integrating asynchronous validation workflows with foundation model inference for reliable, low-latency processing.",
+    "Engineered prompt orchestration pipelines and LLM-powered guardrails by combining foundation model inference with deterministic business rules, improving validation accuracy, consistency, and production reliability.",
+    "Collaborated with product managers, applied scientists, and cross-functional engineering teams to productionize GenAI-driven marketing workflows while maintaining enterprise-scale performance and operational excellence."
+  ],
+  "technologies": [
+    "Java",
+    "Spring Boot",
+    "Coral",
+    "DynamoDB",
+    "Amazon Bedrock",
+    "AWS",
+    "Generative AI",
+    "Large Language Models (LLMs)",
+    "Prompt Engineering",
+    "Distributed Systems",
+    "Microservices"
+  ],
+  "highlights": [
+    {
+      "metric": "27%",
+      "description": "automated campaign validation efficiency"
+    },
+    {
+      "metric": "3.4×",
+      "description": "improvement in validation throughput"
+    },
+    {
+      "metric": "AI",
+      "description": "production-grade GenAI validation agent built using Amazon Bedrock"
+    }
+  ]
+},
+    {
         "title": "Software Development Engineer - 1",
         "company": "Source.One",
         "location": "Pune, India",
